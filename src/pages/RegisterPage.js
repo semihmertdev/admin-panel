@@ -20,7 +20,7 @@ function RegisterPage() {
       });
       localStorage.setItem('token', response.data.token);
       alert('Registration successful!');
-      navigate('/');
+      navigate('/login');
     } catch (error) {
       console.error('Registration failed:', error);
       alert('Registration failed. Please try again.');
