@@ -15,7 +15,8 @@ function RegisterPage() {
       const response = await axios.post('http://localhost:5000/api/auth/register', {
         username,
         email,
-        password
+        password,
+        isAuthor: true
       });
       localStorage.setItem('token', response.data.token);
       alert('Registration successful!');
