@@ -37,11 +37,11 @@ function PostList() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 my-2.5">
       <h2 className="text-lg font-semibold">All Posts</h2>
       <ul className="space-y-4">
         {posts.map(post => (
-          <li key={post.id} className="p-4 bg-white shadow-md rounded-lg">
+          <li key={post.id} className="p-4 bg-white shadow-md rounded-lg flex justify-between">
             <Link to={`/edit/${post.id}`} className="text-lg font-medium text-blue-500 hover:underline">
               {post.title}
             </Link>
