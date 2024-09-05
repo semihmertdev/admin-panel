@@ -1,5 +1,3 @@
-// src/components/PostList.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -39,13 +37,18 @@ function PostList() {
   };
 
   return (
-    <div>
-      <h2>All Posts</h2>
-      <ul>
+    <div className="space-y-6">
+      <h2 className="text-lg font-semibold">All Posts</h2>
+      <ul className="space-y-4">
         {posts.map(post => (
-          <li key={post.id}>
-            <Link to={`/edit/${post.id}`}>{post.title}</Link>
-            <button onClick={() => handlePublish(post.id, post.published)}>
+          <li key={post.id} className="p-4 bg-white shadow-md rounded-lg">
+            <Link to={`/edit/${post.id}`} className="text-lg font-medium text-blue-500 hover:underline">
+              {post.title}
+            </Link>
+            <button
+              className="ml-4 bg-green-500 text-white px-2 py-1 rounded-md"
+              onClick={() => handlePublish(post.id, post.published)}
+            >
               {post.published ? 'Unpublish' : 'Publish'}
             </button>
           </li>

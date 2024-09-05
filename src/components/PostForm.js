@@ -1,5 +1,3 @@
-// src/components/PostForm.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -32,27 +30,34 @@ function PostForm({ postId, onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label htmlFor="title">Title:</label>
+        <label htmlFor="title" className="block text-sm font-medium text-gray-700">Title:</label>
         <input
           type="text"
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
+          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
         />
       </div>
       <div>
-        <label htmlFor="content">Content:</label>
+        <label htmlFor="content" className="block text-sm font-medium text-gray-700">Content:</label>
         <textarea
           id="content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
           required
+          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
         />
       </div>
-      <button type="submit">{postId ? 'Update' : 'Create'} Post</button>
+      <button
+        type="submit"
+        className="bg-blue-500 text-white px-4 py-2 rounded-md"
+      >
+        {postId ? 'Update' : 'Create'} Post
+      </button>
     </form>
   );
 }

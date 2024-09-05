@@ -1,4 +1,3 @@
-// src/pages/EditPostPage.js
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import PostForm from '../components/PostForm';
@@ -24,10 +23,12 @@ function EditPostPage() {
   };
 
   return (
-    <div>
-      <h1>Edit Post</h1>
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4">Edit Post</h1>
       <PostForm postId={id} onSubmit={handleUpdatePost} />
-      <CommentList postId={id} />
+      <div className="mt-8">
+        <CommentList postId={id} />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,3 @@
-// src/pages/DashboardPage.js
-
 import React from 'react';
 import PostList from '../components/PostList';
 import PostForm from '../components/PostForm';
@@ -24,9 +22,9 @@ function DashboardPage() {
   
 
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <h2>Create New Post</h2>
+    <div className="container mx-auto p-6">
+      <h1 className="text-2xl font-bold">Dashboard</h1>
+      <h2 className="text-xl mt-4">Create New Post</h2>
       <PostForm onSubmit={handleCreatePost} />
       <PostList />
     </div>
