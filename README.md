@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Admin Panel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple admin panel built with React and Tailwind CSS. It allows users to manage posts and view comments. Users can create, edit, delete, and publish/unpublish posts. Authentication is handled through a login and registration system. Axios is used to interact with the backend API.
+
+## Features
+
+- **User Authentication**: Users can register, login, and logout.
+- **Post Management**: Create, edit, delete, and publish/unpublish posts.
+- **Comment Viewing**: View comments associated with posts.
+- **Authorization**: Access to the dashboard and post management is restricted to logged-in users.
+  
+## Technologies Used
+
+- **React**: Frontend framework for building user interfaces.
+- **Axios**: For making HTTP requests to the backend API.
+- **React Router**: For client-side routing and navigation.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **LocalStorage**: To store authentication tokens for persistent login sessions.
+
+## Installation
+
+To get started with the project, follow these steps:
+
+1. **Clone the repository:**
+
+    git clone https://github.com/your-username/admin-panel.git
+
+2. **Navigate into the project directory:**
+
+    cd admin-panel
+
+3. **Install dependencies:**
+
+    npm install
+
+4. **Start the development server:**
+
+    npm start
+
+5. **The application should now be running at http://localhost:3000.**
+
+# Backend API
+
+This project is designed to work with the backend API located at:
+The API handles user authentication, post management, and comment management. Make sure your backend server is running before testing this frontend.
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run the following commands:
 
-### `npm start`
+- `npm start`
+  Runs the app in development mode. Open http://localhost:3000 to view it in the browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `npm run build`
+  Builds the app for production to the `build` folder.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Folder Structure
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* `src/components`: Contains reusable components such as `Header`, `PostList`, `PostForm`, and `CommentList`.
+* `src/pages`: Contains page components like `DashboardPage`, `EditPostPage`, `LoginPage`, and `RegisterPage`.
+* `src/App.js`: Main application component with route handling.
+* `src/index.js`: Entry point for the React application.
