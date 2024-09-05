@@ -21,6 +21,7 @@ function Header() {
             </>
           ) : (
             <>
+              <li><Link to="https://public-blog-iota.vercel.app/" className="hover:underline">Home</Link></li>
               <li><Link to="/login" className="hover:underline">Login</Link></li>
               <li><Link to="/register" className="hover:underline">Register</Link></li>
             </>
