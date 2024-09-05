@@ -9,7 +9,7 @@ function PostList() {
     const fetchPosts = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/posts', {
+        const response = await axios.get('https://backend-api-ze9x.onrender.com/api/posts', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setPosts(response.data);
@@ -25,7 +25,7 @@ function PostList() {
     try {
       const token = localStorage.getItem('token');
       const endpoint = isPublished ? 'unpublish' : 'publish';
-      await axios.put(`http://localhost:5000/api/posts/${id}/${endpoint}`, {}, {
+      await axios.put(`https://backend-api-ze9x.onrender.com/api/posts/${id}/${endpoint}`, {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setPosts(posts.map(post => 

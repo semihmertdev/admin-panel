@@ -11,7 +11,7 @@ function EditPostPage() {
   const handleUpdatePost = async (postData) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:5000/api/posts/${id}`, postData, {
+      await axios.put(`https://backend-api-ze9x.onrender.com/api/posts/${id}`, postData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert('Post updated successfully!');

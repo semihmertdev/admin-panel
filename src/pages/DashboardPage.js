@@ -11,10 +11,10 @@ function DashboardPage() {
   const handleCreatePost = async (postData) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/posts', postData, {
+      await axios.post('https://backend-api-ze9x.onrender.com/api/posts', postData, {
         headers: { Authorization: `Bearer ${token}` }
       });
-      setShowForm(false); // Hide form after successful post creation
+      setShowForm(false); 
       navigate(0);
     } catch (error) {
       console.error('Error creating post:', error.response ? error.response.data : error.message);

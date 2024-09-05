@@ -8,7 +8,7 @@ function CommentList({ postId }) {
     const fetchComments = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/api/comments/post/${postId}`, {
+        const response = await axios.get(`https://backend-api-ze9x.onrender.com/api/comments/post/${postId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setComments(response.data);
@@ -23,7 +23,7 @@ function CommentList({ postId }) {
   const handleDeleteComment = async (commentId) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/comments/${commentId}`, {
+      await axios.delete(`https://backend-api-ze9x.onrender.com/api/comments/${commentId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setComments(comments.filter(comment => comment.id !== commentId));

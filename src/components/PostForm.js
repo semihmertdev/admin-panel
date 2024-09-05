@@ -10,7 +10,7 @@ function PostForm({ postId, onSubmit }) {
       const fetchPost = async () => {
         try {
           const token = localStorage.getItem('token');
-          const response = await axios.get(`http://localhost:5000/api/posts/${postId}`, {
+          const response = await axios.get(`https://backend-api-ze9x.onrender.com/api/posts/${postId}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           setTitle(response.data.title);
